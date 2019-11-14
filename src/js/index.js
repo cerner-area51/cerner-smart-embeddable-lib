@@ -5,7 +5,7 @@ import CernerSmartEmbeddableLib from './cerner-smart-embeddable-lib';
 
 window.CernerSmartEmbeddableLib = window.CernerSmartEmbeddableLib || {};
 
-if (window.gon.isEmbedded) {
+if (window.external && typeof window.external.DiscernObjectFactory !== 'undefined') {
   CernerSmartEmbeddableLib.init();
   CernerSmartEmbeddableLib.listenForCustomFrameHeight();
 

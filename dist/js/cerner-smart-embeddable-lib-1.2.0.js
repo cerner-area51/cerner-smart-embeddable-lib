@@ -916,7 +916,7 @@ window.CernerSmartEmbeddableLib = window.CernerSmartEmbeddableLib || {}; /* glob
 // eslint-disable-next-line no-unused-vars
 
 
-if (window.gon.isEmbedded) {
+if (window.external && typeof window.external.DiscernObjectFactory !== 'undefined') {
   _cernerSmartEmbeddableLib2.default.init();
   _cernerSmartEmbeddableLib2.default.listenForCustomFrameHeight();
 
